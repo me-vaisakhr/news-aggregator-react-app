@@ -1,10 +1,10 @@
 import React from 'react'
-import { incrementAction,decrementAction } from '../redux/actions/countingAction';
+import { incrementAction,decrementAction } from '../../redux/actions/countingAction';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import {
   getCount
-} from '../redux/selectors/countingSelector';
+} from '../../redux/selectors/countingSelector';
 
 const TestCounter = ({count,incrementAction,decrementAction,}) => {
     return(
