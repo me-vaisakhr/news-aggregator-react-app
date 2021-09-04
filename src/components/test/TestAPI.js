@@ -12,7 +12,6 @@ const TestAPI = ({loading, posts, error,fetchPosts}) => {
     React.useEffect(()=>{
         fetchPosts();
     },[]);
-    console.log({posts,loading})
     return(
         <>
         {
