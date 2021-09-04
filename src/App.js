@@ -1,11 +1,11 @@
-
-
+//Test Component for redux
+import TestCounter from './components/TestCounter'
 function App() {
   return (
     <div className="App">
-      <h1>You are at the app page</h1>
+      <TestCounter />
     </div>
   );
 }
-
-export default App;
+  
+export default App
