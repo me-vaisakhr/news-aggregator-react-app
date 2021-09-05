@@ -103,7 +103,6 @@ const WeatherInfo = ({loading, weather, error, fetchCurrentWeather}) => {
             options
         )
     } 
-    console.log(loading)
     return (
         <Box component="div" className={classes.weatherContainer}>
             {weather && <img src={`${WEATHER_ICON_PATH}${weather.weather[0]?.icon}.png`} />}
