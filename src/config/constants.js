@@ -1,4 +1,5 @@
 export const APP_NAME = '#ARIVU'
+export const WEATHER_ICON_PATH = 'http://openweathermap.org/img/wn/'
 export const COUNTRIES = [
     {
         name:'Arabic',

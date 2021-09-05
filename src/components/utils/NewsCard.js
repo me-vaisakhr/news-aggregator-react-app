@@ -19,7 +19,6 @@ import { CardActionArea, Link } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
   },
   media: {
     height: 0,

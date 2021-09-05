@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
     },
     mobileSearchBarContainer:{
         marginTop: '10px'
+    },
+    mobileLanguageSelector:{
+        display:'flex',
+        justifyContent:'flex-end'
     }
 }));
 
@@ -46,7 +50,7 @@ const Header = ({onSearch, onLanguageChange}) => {
                 <Box component="div">
                     <WeatherInfo/>
                     <Hidden smUp>
-                        <Box component="div">
+                        <Box component="div" className={classes.mobileLanguageSelector}>
                             <LanguageSelector onLanguageChange={onLanguageChange}/>
                         </Box>
                     </Hidden>

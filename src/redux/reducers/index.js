@@ -5,13 +5,15 @@ import { connectRouter } from 'connected-react-router';
 import countingReducer from './countingReducer'
 import exampleReducer from './exampleReducer'
 import fetchNewsReducer from './fetchNewsReducer'
+import fetchWeatherReducer from './fetchWeatherReducer'
 const createRootReducer = history =>
   combineReducers({
     router: connectRouter(history),
     // rest of your reducers
     countingReducer,
     exampleReducer,
-    fetchNewsReducer
+    fetchNewsReducer,
+    fetchWeatherReducer
 });
 
 export default createRootReducer;
