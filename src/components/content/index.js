@@ -78,6 +78,7 @@ const NewsContent = ({options, loading, news, error, fetchTopHeadlines, fetchSea
     const {articles} = news 
     return (
         <Container className={classes.contentContainer}>
+            <>{loading && <Loader open={loading}/>}</>
             <Box component="div" className={classes.titleContainer}>
                 <Typography className={classes.headline} variant="h6">
                     {news && news.title}
@@ -91,8 +92,7 @@ const NewsContent = ({options, loading, news, error, fetchTopHeadlines, fetchSea
                         </Grid>
                     )) :
                     <>
-                        {loading ?
-                            <Loader open={loading}/> :
+                        {!loading &&
                             <EmptyList/>
                         }
                     </>
