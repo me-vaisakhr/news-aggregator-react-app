@@ -1,12 +1,14 @@
-//Test Component for redux
-import TestCounter from './components/test/TestCounter'
-import TestAPI from './components/test/TestAPI'
+// Home page component
+import Home from './components/home'
+import { BrowserRouter as Router} from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      <TestCounter />
-      <TestAPI/>
-    </div>
+    <Router>
+      <div className="App">
+        <Home/>
+      </div>
+    </Router>
   );
 }
   
