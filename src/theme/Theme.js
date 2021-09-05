@@ -1,3 +1,6 @@
+/**
+ * File for handling the theming of the application.
+ */
 import { createTheme } from '@material-ui/core/styles';
 import {red,blue} from "@material-ui/core/colors";
 const defaultTheme = createTheme({

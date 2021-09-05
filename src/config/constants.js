@@ -1,4 +1,8 @@
-export const APP_NAME = '#ARIVU'
+/**
+ * File to hold all the constants datas
+ */
+export const APP_NAME = '#KNOW'
+export const DEFAULT_LANGUAGE = 'en'
 export const WEATHER_ICON_PATH = 'http://openweathermap.org/img/wn/'
 export const COUNTRIES = [
     {

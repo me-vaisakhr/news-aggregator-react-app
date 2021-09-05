@@ -11,6 +11,10 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+/**
+ * SearchBar - is the component for search
+ * @param onSearch - handler to handle the search value changes
+ */
 const SearchBar = ({onSearch}) => {
     const classes = useStyles();
     const [input,setInput] = React.useState('');

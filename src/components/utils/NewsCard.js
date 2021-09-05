@@ -36,9 +36,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * NewsCard - is the component used showing the single news element.
+ * @param news - is prop having details of single news element.
+ */
 export default function NewsCard({news}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+
+  /**
+   * handleExpandClick - handler to handle the collapse and expand operation in the news card.
+   */
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };

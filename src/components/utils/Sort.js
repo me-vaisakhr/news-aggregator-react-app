@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * Sort - is the component for sort selction.
+ * @param onSortChange - handler to handle the sort value changes
+ */
 export default function Sort({onSortChange}) {
   const classes = useStyles();
 
@@ -33,10 +37,18 @@ export default function Sort({onSortChange}) {
   const [selection, setSelection] = React.useState('publishedAt');
   const [sort, setSort] = useQueryParam('sort', '');
 
+  /**
+   * handleClick - handler for opening the popover / menulist
+   * @param event - click event 
+   */
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
+  /**
+   * handleSelection - handler for user selection.
+   * @param selection - selected sort value 
+   */
   const handleSelection = (selection) => {
     setAnchorEl(null);
     setSelection(selection)
@@ -50,6 +62,9 @@ export default function Sort({onSortChange}) {
     }
   },[sort])
 
+  /**
+   * handleClose - handler for closing the popover / menulist.
+   */
   const handleClose = () => {
     setAnchorEl(null);
   };

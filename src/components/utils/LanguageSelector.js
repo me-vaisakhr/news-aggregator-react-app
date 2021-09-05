@@ -4,7 +4,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import {COUNTRIES} from '../../config/constants'
+import {COUNTRIES, DEFAULT_LANGUAGE} from '../../config/constants'
 import useQueryParam from '../../hooks/useQueryParam'
 
 const useStyles = makeStyles((theme) => ({
@@ -17,12 +17,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * LanguageSelector - is the component responsible for the langauage selection.
+ * @param onLanguageChange - handler prop to handle the change in language value
+ */
+
 export default function LanguageSelector({onLanguageChange}) {
   const classes = useStyles();
-  const [code, setCode] = React.useState('en');
+  const [code, setCode] = React.useState(DEFAULT_LANGUAGE);
   const [open, setOpen] = React.useState(false);
   const [language, setLanguage] = useQueryParam('language', '');
 
+  /**
+   * handleChange - handler to handle the selection change.
+   * @param event - event of selection.
+   */
   const handleChange = (event) => {
     setCode(event.target.value);
     setLanguage(event.target.value)
@@ -35,10 +44,15 @@ export default function LanguageSelector({onLanguageChange}) {
     }
   },[language])
 
+  /**
+   * handleClose - handler to close the language menulist.
+   */
   const handleClose = () => {
     setOpen(false);
   };
-
+  /**
+   * handleOpen - handler to open the language menulist.
+   */
   const handleOpen = () => {
     setOpen(true);
   };

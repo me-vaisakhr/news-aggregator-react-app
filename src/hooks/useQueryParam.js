@@ -11,6 +11,11 @@ const getQueryStringVal = (key = null)  => {
     return getQuery().get(key);
 };
 
+/**
+ * useQueryParam - hook to set the values as query params
+ * @param key - query param key
+ * @param defaultVal - default value for the query param
+ */
 const useQueryParam = (key, defaultVal) => {
     const [query, setQuery] = React.useState(getQueryStringVal(key) || defaultVal);
   

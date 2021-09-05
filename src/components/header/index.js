@@ -32,7 +32,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent:'flex-end'
     }
 }));
-
+/**
+ * Header - is the component responsible for the header section of the application.
+ * @param onSearch - handler to handle the search value changes.
+ * @param onLanguageChange - handler to handle the language value changes.
+ */
 const Header = ({onSearch, onLanguageChange}) => {
     const classes = useStyles();
     return (

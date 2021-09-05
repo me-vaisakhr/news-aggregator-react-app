@@ -49,6 +49,15 @@ const useStyles = makeStyles((theme) => ({
         }
     },
 }));
+
+/**
+ * WeatherInfo - is the component responsible for showing the weather details in the header.
+ * @param loading - will be come true on the api calls
+ * @param weather - will have the weather details
+ * @param error - will have the error message if api throws error
+ * @param fetchCurrentWeather - api handler for fetch the weather details.
+ * @returns 
+ */
 const WeatherInfo = ({loading, weather, error, fetchCurrentWeather}) => {
     const classes = useStyles();
     const options = {
@@ -57,18 +66,23 @@ const WeatherInfo = ({loading, weather, error, fetchCurrentWeather}) => {
         maximumAge: 0
     };
 
+    /**
+     * locationFetchSuccess - handler to call the weather api if it possible to fetch the location of user
+     * @param location - will have the geo location details of the user.
+     */
     const locationFetchSuccess = async (location) =>{
-        console.log('Success => ',location)
         const latitude = location.coords.latitude
         const longitude = location.coords.longitude
         await fetchCurrentWeather({latitude,longitude})
     }
 
+    /**
+     * locationFetchFailed - handler to if it failed to fetch the location of user
+     * @param error - error message.
+     */
     const locationFetchFailed = (error) =>{
         console.log('Failed => ',error)
     }
-
-    console.log('Weather => ',weather)
 
     React.useEffect(()=>{
         window.navigator.geolocation.getCurrentPosition(
@@ -78,6 +92,10 @@ const WeatherInfo = ({loading, weather, error, fetchCurrentWeather}) => {
         )
     },[])
 
+    /**
+     * handleRefresh - handler to refresh the weather details.
+     * @param e - click event details.
+     */
     const handleRefresh = (e) => {
         window.navigator.geolocation.getCurrentPosition(
             locationFetchSuccess,

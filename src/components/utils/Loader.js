@@ -5,6 +5,12 @@ const useStyles = makeStyles((theme) => ({
         zIndex: theme.zIndex.drawer + 1,
     }
 }));
+
+/**
+ * Loader - is the component responsible for the showing the loader 
+ * @param open - status to decide either to show / hide the loader
+ * @returns 
+ */
 const Loader = ({open}) => {
     const classes = useStyles();
     return (

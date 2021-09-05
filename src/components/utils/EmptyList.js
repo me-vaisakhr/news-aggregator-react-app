@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
         color:theme.palette.secondary.main
     }
 }));
+
+/**
+ * EmptyList - is the component responsible for the showing the empty message if api return an empty list
+ * @returns 
+ */
 const EmptyList = () => {
     const classes = useStyles();
     return (

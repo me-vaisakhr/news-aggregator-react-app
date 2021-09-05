@@ -8,6 +8,10 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:700,
     }
 }));
+
+/**
+ * Logo - is the component for the application logo
+ */
 const Logo = () => {
     const classes = useStyles();
     return (

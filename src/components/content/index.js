@@ -1,6 +1,5 @@
 import { Box, Card, CardContent, Container, Grid, Typography } from "@material-ui/core"
 import makeStyles from '@material-ui/core/styles/makeStyles';
-
 import { fetchTopHeadlines, fetchSearchedNews } from '../../redux/actions/fetchNewsAction';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -36,6 +35,19 @@ const useStyles = makeStyles((theme) => ({
         padding:'2px',
     }
 }));
+/**
+ * NewsContent - is the component used to for display the news list. It can have either top headlines / searched list
+ * @param options - option which is applied to call the news api
+ * 1. search - search key
+ * 2. language - language selected
+ * 3. sort - dort applied
+ * @param loading - status will true if it is calling api
+ * @param news - list of news including title and array of news details
+ * @param error - error details if something happened in between the ap calls.
+ * @param fetchTopHeadlines - api handler to call the top headlines
+ * @param fetchSearchedNews - api handler to search a news.
+ * @param onSortChange - handler to handle the sort value changes.
+ */
 const NewsContent = ({options, loading, news, error, fetchTopHeadlines, fetchSearchedNews, onSortChange}) => {
     React.useEffect(()=>{
         if(options){
@@ -47,10 +59,17 @@ const NewsContent = ({options, loading, news, error, fetchTopHeadlines, fetchSea
             }
         }
     },[options])
+
+    /**
+     * getSearchedNews - handler to fetch all top headlines.
+     */
     const getTopHeadlines =async (options) => {
         await fetchTopHeadlines(options);
     }
 
+    /**
+     * getSearchedNews - handler to search news
+     */
     const getSearchedNews =async (options) => {
         const data = options
         await fetchSearchedNews(data);

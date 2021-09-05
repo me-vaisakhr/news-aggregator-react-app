@@ -7,9 +7,17 @@ const useStyles = makeStyles((theme) => ({
         fontSize:'12px',
     }
 }));
+
+/**
+ * Time - is the component for showing the time in the header 
+ */
 const Time = () => {
     const classes = useStyles();
     const [time, setTime] = React.useState(''+new Date().toDateString() + ' ' +new Date().toLocaleTimeString())
+    
+    /**
+     * setTimer - handler for the dynamic time change. 
+    */
     const setTimer = () => {
         setTime(''+new Date().toDateString() + ', ' +new Date().toLocaleTimeString())
     }
