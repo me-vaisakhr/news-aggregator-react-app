@@ -52,7 +52,7 @@ export default function NewsCard({news}) {
           </Avatar>
         }
         title={news.source && news.source.name||news.author}
-        subheader={news.publishedAt}
+        subheader={new Date(news.publishedAt).toDateString()+', '+new Date(news.publishedAt).toLocaleTimeString()}
       />
       <Link target="_blank" href={news.url?news.url:''} underline="none">
         <CardActionArea>
