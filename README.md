@@ -86,7 +86,7 @@ Value would be like `https://newsapi.org/v2/`
 
 ### `REACT_APP_NEWS_API_KEY` 
 
-For setting the api key for the newsapi endpoint. For this you have to create a account on NewsAPI site. Link - [https://newsapi.org/] (https://newsapi.org/)
+For setting the api key for the newsapi endpoint. For this you have to create a account on NewsAPI site. Link - [https://newsapi.org/]
 
 ### `REACT_APP_WEATHER_API`
 
@@ -95,4 +95,4 @@ Value would be like `https://api.openweathermap.org/data/2.5/`
 
 ### `REACT_APP_WEATHER_API_KEY` 
 
-For setting the api key for the openweather api endpoint. For this you have to create a account on OpenWeather site. Link - [https://openweathermap.org/] (https://openweathermap.org/)
+For setting the api key for the openweather api endpoint. For this you have to create a account on OpenWeather site. Link - [https://openweathermap.org/] 
