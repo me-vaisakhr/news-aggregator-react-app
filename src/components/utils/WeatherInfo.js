@@ -4,6 +4,7 @@ import React from "react";
 import { fetchCurrentWeather } from '../../redux/actions/fetchWeatherAction';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import Tooltip from '@material-ui/core/Tooltip';
 import {
   getLoading,
   getWeather,
@@ -105,7 +106,7 @@ const WeatherInfo = ({loading, weather, error, fetchCurrentWeather}) => {
     } 
     return (
         <Box component="div" className={classes.weatherContainer}>
-            {weather && <img src={`${WEATHER_ICON_PATH}${weather.weather[0]?.icon}.png`} />}
+            {weather && <Tooltip title={`${weather.weather[0]?.description.toUpperCase()}`}><img src={`${WEATHER_ICON_PATH}${weather.weather[0]?.icon}.png`} /></Tooltip>}
             <Typography className={classes.weatherText} variant="h1">
                 {weather ? ` ${Math.ceil(weather.main.temp)}°c at your place`: `No weather data available`}
             </Typography>
