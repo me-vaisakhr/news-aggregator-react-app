@@ -68,3 +68,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Api Integrated
+
+### API's Integrated
+
+For News - NewsAPI - [https://newsapi.org/] (https://newsapi.org/)
+
+For Weather - OpenWeather - [https://openweathermap.org/] (https://openweathermap.org/)
+
+## Enviornment Variables Required
+
+### `REACT_APP_NEWS_API` 
+
+For setting the news api endpoint 
+Value would be like `https://newsapi.org/v2/`
+
+### `REACT_APP_NEWS_API_KEY` 
+
+For setting the api key for the newsapi endpoint. For this you have to create a account on NewsAPI site. Link - [https://newsapi.org/] (https://newsapi.org/)
+
+### `REACT_APP_WEATHER_API`
+
+For setting the weather api endpoint 
+Value would be like `https://api.openweathermap.org/data/2.5/`
+
+### `REACT_APP_WEATHER_API_KEY` 
+
+For setting the api key for the openweather api endpoint. For this you have to create a account on OpenWeather site. Link - [https://openweathermap.org/] (https://openweathermap.org/)
