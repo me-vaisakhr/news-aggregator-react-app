@@ -1,4 +1,5 @@
 import { ApiClient } from "./apiClient";
+import {DEFAULT_SORT} from '../config/constants'
 
 let client = new ApiClient(process.env.REACT_APP_NEWS_API);
 
@@ -22,6 +23,9 @@ export default {
     if(sort){
       qp+=`&sortBy=${sort}`
     }
+    else{
+      qp+=`&sortBy=${DEFAULT_SORT}`
+    }
     return client.get(`/top-headlines?apiKey=${process.env.REACT_APP_NEWS_API_KEY}&pageSize=100${qp}`);
   },
   /**
@@ -42,6 +46,9 @@ export default {
     }
     if(sort){
       qp+=`&sortBy=${sort}`
+    }
+    else{
+      qp+=`&sortBy=${DEFAULT_SORT}`
     }
     return client.get(`/everything?apiKey=${process.env.REACT_APP_NEWS_API_KEY}&pageSize=100${qp}`);
   }

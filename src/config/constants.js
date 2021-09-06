@@ -3,6 +3,7 @@
  */
 export const APP_NAME = '#KNOW'
 export const DEFAULT_LANGUAGE = 'en'
+export const DEFAULT_SORT = 'publishedAt'
 export const WEATHER_ICON_PATH = 'http://openweathermap.org/img/wn/'
 export const COUNTRIES = [
     {
