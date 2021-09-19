@@ -4,6 +4,7 @@ import NewsContent from "../content";
 import Header from '../header'
 import {useLocation} from "react-router-dom";
 import {DEFAULT_LANGUAGE} from '../../config/constants'
+import Settings from "../utils/Settings";
 
 /**
  * Home - is the component which is the main page, which have header part and news list showing part  
@@ -70,6 +71,7 @@ const Home = () => {
         <Container>
             <Header onSearch={(search)=>{handleSearch(search)}} onLanguageChange={(language)=>{handleLanguage(language)}}/>
             <NewsContent options={options} onSortChange={(sort)=>{handleSort(sort)}}/>
+            <Settings/>
         </Container>
     )
 }

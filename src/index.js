@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
 
 //Material UI Theming
-import { ThemeProvider } from '@material-ui/core';
+import ThemeProvider from './theme/ThemeProvider';
 import { defaultTheme } from './theme/Theme'
 
 //Toaster
@@ -20,7 +20,7 @@ export const store = configureStore({});
 
 ReactDOM.render(
   <Provider store={store}>
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider>
       <App />
     </ThemeProvider>
   </Provider>,
